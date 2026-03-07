@@ -1,0 +1,24 @@
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import { resolve } from "node:path";
+
+const base = process.env.BASE_PATH || "/";
+
+export default defineConfig({
+  plugins: [react()],
+  base,
+  build: {
+    sourcemap: false,
+    outDir: "out",
+  },
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, "./src"),
+    },
+  },
+  server: {
+    port: 3000,
+    host: "0.0.0.0",
+    open: true,
+  },
+});

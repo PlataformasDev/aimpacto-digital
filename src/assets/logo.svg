@@ -1,0 +1,11 @@
+<svg width="160" height="48" viewBox="0 0 160 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="160" height="48" rx="16" fill="url(#paint0_linear_1_1)"/>
+  <path d="M43 33L34.5 15H27L18.5 33H24.2L25.9 29.4H35.6L37.3 33H43ZM33.6 24.4H27.9L30.8 18.3L33.6 24.4Z" fill="white"/>
+  <text x="56" y="32" fill="white" font-size="18" font-family="'Space Grotesk', 'Inter', sans-serif" font-weight="600">Impacto</text>
+  <defs>
+    <linearGradient id="paint0_linear_1_1" x1="0" y1="0" x2="160" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+  </defs>
+</svg>
