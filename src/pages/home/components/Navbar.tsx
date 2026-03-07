@@ -38,13 +38,13 @@ export function Navbar({ onNavigate }: NavbarProps) {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-1">
-          <span className="font-display text-6xl font-bold text-gray-900 leading-none">A</span>
-          <div className="hidden sm:flex flex-col leading-tight">
-            <span className="font-display text-lg font-semibold text-gray-900">
+        <div className="flex items-start gap-2 sm:items-center">
+          <span className="font-display text-5xl font-bold leading-none text-gray-900 sm:text-6xl">A</span>
+          <div className="flex flex-col leading-tight">
+            <span className="font-display text-base font-semibold text-gray-900 sm:text-lg">
               Impacto Digital
             </span>
-            <span className="text-xs uppercase tracking-[0.2em] text-gray-500">
+            <span className="text-[0.6rem] uppercase tracking-[0.25em] text-gray-500 sm:text-xs">
               Soluções Inteligentes
             </span>
           </div>
