@@ -174,4 +174,73 @@ export const projects: Project[] = [
       "Compliance LGPD completo",
     ],
   },
+  {
+    id: "checklist-field-ops",
+    title: "Checklist Field Ops",
+    type: "Mobile App",
+    emoji: "📝",
+    color: "from-lime-500 via-emerald-500 to-green-600",
+    benefit: "✨ Fluxos híbridos online/offline para operações de campo",
+    description:
+      "Aplicativo Flutter que centraliza checklists de peças, serviços, PLM e comercial com envio automático e anexos.",
+    features: [
+      "Formulários por segmento com validações",
+      "Sincronização Firestore + SQLite",
+      "Exportação PDF e anexos de fotos",
+    ],
+    fullDescription:
+      "Desenvolvido para consultores de campo, o Checklist Field Ops garante captura confiável de dados por loja, funciona offline-first e dispara e-mails, PDFs e registros no Firestore sem depender de conexão constante.",
+    technologies: ["Flutter", "Firebase", "SQLite", "Image Compress"],
+    results: [
+      "100% dos checklists enviados mesmo offline",
+      "Redução de erros manuais em 60%",
+      "Tempo de auditoria 3x menor",
+    ],
+  },
+  {
+    id: "xingu-pecas-insights",
+    title: "Xingu Peças Insights",
+    type: "Analytics",
+    emoji: "📦",
+    color: "from-cyan-500 via-blue-600 to-indigo-700",
+    benefit: "✨ Visão única do estoque com alertas críticos",
+    description:
+      "Dashboard Next.js com autenticação corporativa que monitora SKUs, rupturas e recomendações de compra por filial.",
+    features: [
+      "Filtros por filial e classificação",
+      "Ranking de produtos críticos",
+      "Breakdown original vs paralelo",
+    ],
+    fullDescription:
+      "Integra dados operacionais em um cockpit visual, permitindo acompanhar KPIs de estoque, detectar rupturas em tempo real e orientar planos de compra com segurança e governança.",
+    technologies: ["Next.js 14", "NextAuth", "Supabase", "Recharts"],
+    results: [
+      "-25% rupturas nas filiais",
+      "+35% agilidade nas decisões de compra",
+      "Acesso 100% auditável",
+    ],
+  },
+  {
+    id: "consultor-xingu-hub",
+    title: "Consultor Xingu Hub",
+    type: "Sales Enablement",
+    emoji: "🧭",
+    color: "from-blue-400 via-sky-500 to-emerald-500",
+    benefit: "✨ Dados de carteira e estoque sempre atualizados",
+    description:
+      "PWA para vendedores com dashboards de vendas, sincronização automática de usuários e estoque direto do ERP.",
+    features: [
+      "Onboarding automático de consultores",
+      "Ingestão massiva com backoff",
+      "Dashboards e ranking em tempo real",
+    ],
+    fullDescription:
+      "Conecta vendedores à operação com autenticação Firebase, sincroniza carteiras e produtos via API Nuvemsolution e mantém o time informado no desktop ou celular.",
+    technologies: ["React", "Firebase", "Vite", "Python"],
+    results: [
+      "Cadastro de vendedores em minutos",
+      "Catálogo atualizado diariamente",
+      "Uso PWA em campo",
+    ],
+  },
 ];
