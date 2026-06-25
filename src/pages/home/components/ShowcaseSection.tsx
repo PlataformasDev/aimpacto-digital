@@ -78,6 +78,9 @@ export function ShowcaseSection() {
               >
                 Saber Mais
               </motion.button>
+              <p className="mt-3 text-center text-xs text-gray-400">
+                Personalizável conforme sua operação
+              </p>
             </div>
           </motion.div>
         ))}
