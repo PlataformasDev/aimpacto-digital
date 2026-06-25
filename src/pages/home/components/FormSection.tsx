@@ -109,7 +109,7 @@ export function FormSection() {
                 <option value="xone">Controle de Revisões</option>
                 <option value="frota">App Frota</option>
                 <option value="cobranca">Cobrança Pro</option>
-                <option value="checklist">Checklist Field Ops</option>
+                <option value="landing">Landing Page Gerenciável</option>
                 <option value="pecas">Inteligência de Estoque</option>
                 <option value="hub">Painel Comercial de Campo</option>
                 <option value="other">Outro</option>

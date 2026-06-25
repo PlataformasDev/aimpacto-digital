@@ -14,6 +14,7 @@ const badgeColor: Record<string, string> = {
   "Gestão":            "bg-teal-100 text-teal-700",
   "Financeiro":        "bg-amber-100 text-amber-700",
   "Sales Enablement":  "bg-cyan-100 text-cyan-700",
+  "Web + CMS":         "bg-violet-100 text-violet-700",
 };
 
 export function ShowcaseSection() {
