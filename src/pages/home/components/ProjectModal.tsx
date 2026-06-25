@@ -7,6 +7,13 @@ type ProjectModalProps = {
 };
 
 export function ProjectModal({ project, onClose }: ProjectModalProps) {
+  const handleRequestQuote = () => {
+    onClose();
+    setTimeout(() => {
+      document.getElementById("orcamento")?.scrollIntoView({ behavior: "smooth" });
+    }, 350);
+  };
+
   return (
     <AnimatePresence>
       {project && (
@@ -94,6 +101,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
+                onClick={handleRequestQuote}
                 className="btn-primary flex-1 text-center"
               >
                 Solicitar Orçamento
@@ -101,6 +109,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
+                onClick={handleRequestQuote}
                 className="flex-1 rounded-full border border-gray-200 px-6 py-3 font-semibold text-gray-700"
               >
                 Agendar Demo

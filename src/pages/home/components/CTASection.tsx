@@ -47,7 +47,7 @@ export function CTASection({ onNavigate }: CTASectionProps) {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => onNavigate("contato")}
+            onClick={() => onNavigate("orcamento")}
             className="btn-secondary px-8 py-3 text-lg"
           >
             Falar com Especialista

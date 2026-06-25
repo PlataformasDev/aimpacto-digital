@@ -1,7 +1,7 @@
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
 
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/contato@xingutech.com";
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/aimpactodigital@gmail.com";
 
 const defaultForm = {
   name: "",
@@ -19,7 +19,7 @@ export function FormSection() {
     null,
   );
 
-  const remainingChars = useMemo(() => 500 - formData.message.length, [formData.message]);
+  const remainingChars = 500 - formData.message.length;
 
   const handleChange = (field: keyof typeof formData) => (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData((prev) => ({ ...prev, [field]: event.target.value }));
@@ -44,7 +44,7 @@ export function FormSection() {
 
       setFeedback({ type: "success", message: "Recebemos sua solicitação! Retornaremos em até 24h." });
       setFormData(defaultForm);
-    } catch (error) {
+    } catch {
       setFeedback({ type: "error", message: "Não foi possível enviar agora. Tente novamente em instantes." });
     } finally {
       setIsSubmitting(false);
@@ -109,6 +109,9 @@ export function FormSection() {
                 <option value="xone">X-ONE Kit</option>
                 <option value="frota">App Frota</option>
                 <option value="cobranca">Cobrança Pro</option>
+                <option value="checklist">Checklist Field Ops</option>
+                <option value="pecas">Xingu Peças Insights</option>
+                <option value="hub">Consultor Xingu Hub</option>
                 <option value="other">Outro</option>
               </select>
             </div>

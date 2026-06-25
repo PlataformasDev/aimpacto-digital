@@ -1,9 +1,12 @@
-export function Footer() {
+type FooterProps = {
+  onNavigate: (sectionId: string) => void;
+};
+
+export function Footer({ onNavigate }: FooterProps) {
   const navigation = [
     { label: "Sobre", id: "sobre" },
     { label: "Projetos", id: "projetos" },
     { label: "Orçamento", id: "orcamento" },
-    { label: "Contato", id: "contato" },
   ];
 
   const contacts = [
@@ -12,23 +15,12 @@ export function Footer() {
     { icon: "ri-map-pin-line", value: "Água Boa - MT" },
   ];
 
-  const socials = [
-    { icon: "ri-linkedin-fill", href: "https://www.linkedin.com" },
-    { icon: "ri-instagram-line", href: "https://www.instagram.com" },
-    { icon: "ri-whatsapp-line", href: "https://wa.me/5566984141352" },
-  ];
-
-  const handleNavigate = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <footer
       id="contato"
       className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white"
     >
-      <div className="section-padding mx-auto grid max-w-6xl gap-10 md:grid-cols-4">
+      <div className="section-padding mx-auto grid max-w-6xl gap-10 md:grid-cols-3">
         <div>
           <p className="font-display text-2xl font-semibold">Impacto Digital</p>
           <p className="mt-3 text-sm text-blue-100">
@@ -44,7 +36,7 @@ export function Footer() {
             {navigation.map((item) => (
               <li key={item.id}>
                 <button
-                  onClick={() => handleNavigate(item.id)}
+                  onClick={() => onNavigate(item.id)}
                   className="transition-colors hover:text-white"
                 >
                   {item.label}
@@ -67,39 +59,11 @@ export function Footer() {
             ))}
           </ul>
         </div>
-
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-200">
-            Redes
-          </p>
-          <div className="mt-4 flex gap-3">
-            {socials.map((social) => (
-              <a
-                key={social.icon}
-                href={social.href}
-                target="_blank"
-                rel="noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-orange-500"
-              >
-                <i className={`${social.icon} text-xl`} />
-              </a>
-            ))}
-          </div>
-        </div>
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-6 text-sm text-blue-200 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex max-w-6xl px-4 py-6 text-sm text-blue-200">
           <p>© {new Date().getFullYear()} Impacto Digital. Todos os direitos reservados.</p>
-          <div className="flex flex-wrap gap-4">
-            <a className="hover:text-white" href="#">
-              Privacidade
-            </a>
-            <a className="hover:text-white" href="#">
-              Termos
-            </a>
-            <span className="text-orange-300">Powered by Readdy</span>
-          </div>
         </div>
       </div>
     </footer>

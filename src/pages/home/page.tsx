@@ -23,7 +23,7 @@ export function HomePage() {
         <CTASection onNavigate={scrollToSection} />
         <FormSection />
       </main>
-      <Footer />
+      <Footer onNavigate={scrollToSection} />
     </div>
   );
 }

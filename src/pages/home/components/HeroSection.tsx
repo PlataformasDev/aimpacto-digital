@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
+import DotGrid from "../../../components/DotGrid";
 
 type HeroSectionProps = {
   onNavigate: (sectionId: string) => void;
 };
-
-const stats = [];
 
 export function HeroSection({ onNavigate }: HeroSectionProps) {
   return (
@@ -24,8 +23,22 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
       <div className="absolute inset-0 bg-gradient-to-b from-blue-900/70 via-blue-800/60 to-slate-900/80" />
       <div className="absolute -left-10 top-10 h-72 w-72 rounded-full bg-cyan-500/30 blur-3xl" />
       <div className="absolute bottom-20 right-0 h-64 w-64 rounded-full bg-orange-500/30 blur-3xl" />
+      <DotGrid
+        dotSize={4}
+        gap={20}
+        baseColor="#1a1a2e"
+        activeColor="#6c5ce7"
+        proximity={150}
+        shockRadius={300}
+        shockStrength={3}
+        resistance={800}
+        returnDuration={2}
+      />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center gap-10 px-4 text-center text-white sm:px-6">
+      <div
+        className="relative z-0 mx-auto flex w-full max-w-6xl flex-col items-center gap-10 px-4 text-center text-white sm:px-6"
+        style={{ pointerEvents: 'none' }}
+      >
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -41,10 +54,40 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
           transition={{ delay: 0.2 }}
           className="rounded-2xl bg-white/10 backdrop-blur-md px-8 py-6"
         >
-          <h1 className="font-display text-4xl font-semibold leading-tight md:text-6xl lg:text-7xl">
-            Soluções Inteligentes para {" "}
-            <span className="gradient-text-primary">Transformar seu Negócio</span>
-          </h1>
+          <motion.h1
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.1, delayChildren: 0.25 },
+              },
+            }}
+            className="font-display text-4xl font-semibold leading-tight md:text-6xl lg:text-7xl"
+          >
+            <motion.span
+              variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+              className="inline-block text-white"
+            >
+              <span className="inline-block whitespace-nowrap">Soluções</span>{" "}
+              <span className="inline-block whitespace-nowrap">Inteligentes para</span>
+            </motion.span>
+            {" "}
+            <motion.span
+              variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+              className="inline-block gradient-text-primary"
+            >
+              Transformar
+            </motion.span>
+            {" "}
+            <motion.span
+              variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+              className="inline-block gradient-text-primary"
+            >
+              seu Negócio
+            </motion.span>
+          </motion.h1>
         </motion.div>
 
         <motion.p
@@ -61,6 +104,7 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
           className="flex flex-wrap items-center justify-center gap-4"
+          style={{ pointerEvents: 'auto' }}
         >
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -86,6 +130,7 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
           className="mt-4 flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/10"
+          style={{ pointerEvents: 'auto' }}
         >
           <i className="ri-arrow-down-line text-2xl" />
         </motion.button>

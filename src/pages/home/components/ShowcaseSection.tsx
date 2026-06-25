@@ -3,6 +3,17 @@ import { motion } from "framer-motion";
 import { projects, type Project } from "../../../mocks/projects";
 import { ProjectModal } from "./ProjectModal";
 
+const badgeColor: Record<string, string> = {
+  "Mobile App":        "bg-emerald-100 text-emerald-700",
+  "Analytics":         "bg-blue-100 text-blue-700",
+  "Intranet":          "bg-purple-100 text-purple-700",
+  "Enterprise":        "bg-slate-100 text-slate-600",
+  "Sales + Dashboard": "bg-orange-100 text-orange-700",
+  "Gestão":            "bg-teal-100 text-teal-700",
+  "Financeiro":        "bg-amber-100 text-amber-700",
+  "Sales Enablement":  "bg-cyan-100 text-cyan-700",
+};
+
 export function ShowcaseSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
@@ -39,14 +50,14 @@ export function ShowcaseSection() {
             <div className="space-y-5 p-8">
               <div className="flex items-start justify-between">
                 <span className="text-5xl">{project.emoji}</span>
-                <span className="rounded-full bg-gray-100 px-4 py-1 text-sm font-medium text-gray-700">
+                <span className={`rounded-full px-4 py-1 text-sm font-medium ${badgeColor[project.type] ?? "bg-gray-100 text-gray-700"}`}>
                   {project.type}
                 </span>
               </div>
               <h3 className="font-display text-2xl font-semibold text-gray-900 transition-colors hover:text-cyan-600">
                 {project.title}
               </h3>
-              <p className="text-sm font-semibold text-orange-500">{project.benefit}</p>
+              <p className="truncate text-sm font-semibold text-orange-500">{project.benefit}</p>
               <p className="text-gray-600">{project.description}</p>
               <ul className="space-y-2">
                 {project.features.map((feature) => (
@@ -60,7 +71,7 @@ export function ShowcaseSection() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => setSelectedProject(project)}
-                className="mt-4 w-full rounded-full bg-gradient-to-r from-gray-900 to-gray-800 px-5 py-3 text-sm font-semibold text-white shadow-lg"
+                className="btn-primary mt-4 w-full text-sm"
               >
                 Saber Mais
               </motion.button>
