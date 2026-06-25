@@ -102,16 +102,16 @@ export function FormSection() {
                 onChange={handleChange("project")}
               >
                 <option value="">Selecione</option>
-                <option value="access">Xingu Access</option>
+                <option value="access">Portal de Aplicações</option>
                 <option value="nps">NPS Dashboard</option>
                 <option value="rh">RH Conecta</option>
                 <option value="portal">Portal Corporativo</option>
-                <option value="xone">X-ONE Kit</option>
+                <option value="xone">Controle de Revisões</option>
                 <option value="frota">App Frota</option>
                 <option value="cobranca">Cobrança Pro</option>
                 <option value="checklist">Checklist Field Ops</option>
-                <option value="pecas">Xingu Peças Insights</option>
-                <option value="hub">Consultor Xingu Hub</option>
+                <option value="pecas">Inteligência de Estoque</option>
+                <option value="hub">Painel Comercial de Campo</option>
                 <option value="other">Outro</option>
               </select>
             </div>
