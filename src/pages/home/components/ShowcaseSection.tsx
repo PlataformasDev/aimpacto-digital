@@ -4,17 +4,12 @@ import { projects, type Project } from "../../../mocks/projects";
 import { ProjectModal } from "./ProjectModal";
 
 const badgeColor: Record<string, string> = {
-  "Mobile App":        "bg-emerald-100 text-emerald-700",
-  "Analytics":         "bg-blue-100 text-blue-700",
-  "Intranet":          "bg-purple-100 text-purple-700",
-  "Enterprise":        "bg-slate-100 text-slate-600",
-  "Hub Corporativo":   "bg-emerald-100 text-emerald-700",
-  "Sales + Dashboard": "bg-orange-100 text-orange-700",
-  "Sales + Analytics":  "bg-orange-100 text-orange-700",
-  "Gestão":            "bg-teal-100 text-teal-700",
-  "Financeiro":        "bg-amber-100 text-amber-700",
-  "Sales Enablement":  "bg-cyan-100 text-cyan-700",
-  "Web + CMS":         "bg-violet-100 text-violet-700",
+  "Analytics":            "bg-blue-100 text-blue-700",
+  "RH + Automação":       "bg-purple-100 text-purple-700",
+  "Gestão + App":         "bg-teal-100 text-teal-700",
+  "Financeiro":           "bg-amber-100 text-amber-700",
+  "Site Personalizável":  "bg-violet-100 text-violet-700",
+  "Sales + Analytics":    "bg-orange-100 text-orange-700",
 };
 
 export function ShowcaseSection() {

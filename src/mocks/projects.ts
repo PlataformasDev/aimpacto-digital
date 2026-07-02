@@ -8,8 +8,6 @@ export type Project = {
   description: string;
   features: string[];
   fullDescription: string;
-  technologies: string[];
-  results: string[];
 };
 
 export const projects: Project[] = [
@@ -17,93 +15,69 @@ export const projects: Project[] = [
     id: "nps-dashboard",
     title: "NPS Dashboard",
     type: "Analytics",
-    emoji: "📊",
+    emoji: "📋",
     color: "from-blue-500 via-indigo-500 to-indigo-600",
-    benefit: "✨ Insights preditivos com IA embarcada",
+    benefit: "✨ Sistema automatizado de Pesquisa de Satisfação",
     description:
-      "Monitoramento de satisfação com NPS em tempo real e relatórios automatizados.",
+      "Painel que automatiza o envio de pesquisas de satisfação por WhatsApp após cada atendimento e centraliza os resultados em tempo real.",
     features: [
-      "Alertas inteligentes",
-      "Segmentação de clientes",
-      "Comparativos multi-filiais",
+      "Envio automático de pesquisas via WhatsApp em etapas programadas",
+      "Alertas em tempo real para notas baixas (detratores)",
+      "Relatórios segmentados por filial e técnico, com exportação em PDF",
     ],
     fullDescription:
-      "Dashboard completo que centraliza pesquisas, indicadores NPS e comentários dos clientes com análises de sentimento e alertas proativos.",
-    technologies: ["Next.js", "Python", "MongoDB", "Power BI"],
-    results: [
-      "+32% fidelização",
-      "Automação de 100% dos relatórios",
-      "Economia anual de R$ 280 mil",
-    ],
+      "Para empresas que prestam serviços e precisam medir a satisfação do cliente sem depender de ligações ou formulários manuais. Após o atendimento, o sistema dispara pesquisas automáticas por WhatsApp em intervalos definidos. As respostas chegam ao painel em tempo real, com destaque imediato para clientes insatisfeitos e um botão de contato rápido para o gestor agir antes que o problema cresça. Relatórios comparam o desempenho por filial e por técnico.",
   },
   {
     id: "rh-conecta",
     title: "RH Conecta",
-    type: "Intranet",
+    type: "RH + Automação",
     emoji: "👥",
     color: "from-purple-500 via-fuchsia-500 to-pink-500",
-    benefit: "✨ Portal único para times e líderes",
+    benefit: "✨ Toda a jornada do colaborador automatizada via WhatsApp",
     description:
-      "Intranet colaborativa com trilhas de onboarding, documentos e workflows digitais.",
+      "Plataforma que automatiza onboarding, desligamento, avaliação 360° e pesquisa de clima, com envio e coleta de respostas direto pelo WhatsApp.",
     features: [
-      "Fluxos customizáveis",
-      "Gamificação de treinamentos",
-      "Analytics de engajamento",
+      "Onboarding digital com assinatura eletrônica via WhatsApp",
+      "Entrevista de desligamento e avaliação 360° com links automáticos",
+      "Pesquisa de clima organizacional e aniversários automatizados",
     ],
     fullDescription:
-      "Conecta RH, líderes e colaboradores com experiências personalizadas e workflows aprovados digitalmente, reduzindo burocracias.",
-    technologies: ["React", "NestJS", "PostgreSQL", "Keycloak"],
-    results: [
-      "-40% no tempo de onboarding",
-      "+55% engajamento interno",
-      "Base com 12 mil colaboradores",
-    ],
+      "Para empresas que querem digitalizar processos de RH sem depender de papel ou reuniões presenciais. Cada etapa da jornada do colaborador — admissão, avaliação, desligamento — gera um link seguro enviado por WhatsApp, com assinatura eletrônica quando necessário. Gestores acompanham tudo por filial, com métricas de participação e resultados centralizados no painel.",
   },
   {
     id: "controle-revisoes",
     title: "Controle de Revisões",
-    type: "Gestão",
+    type: "Gestão + App",
     emoji: "⚙️",
     color: "from-orange-500 via-red-500 to-red-600",
-    benefit: "✨ Alertas automáticos antes que a manutenção atrase",
+    benefit: "✨ Manutenção da frota monitorada em tempo real, com alertas automáticos",
     description:
-      "PWA para monitoramento de horas e controle de revisões preventivas de máquinas, com painel admin e múltiplos perfis de acesso.",
+      "Sistema com app de campo para operadores registrarem horas e um painel de gestão para administradores acompanharem toda a frota, sincronizados em tempo real.",
     features: [
-      "Monitoramento de horas por equipamento",
-      "Alertas de revisão com status visual",
-      "Perfis para cliente, técnico e operador",
+      "Registro de horas em campo com histórico de observações, fotos e áudio",
+      "Status de manutenção em tempo real (normal, atenção, crítico) com alertas automáticos via WhatsApp",
+      "Painel de gestão com filtros por filial, exportação de relatórios e múltiplos perfis de acesso",
     ],
     fullDescription:
-      "Para empresas que operam frotas de máquinas e precisam evitar paradas não planejadas. Cada equipamento tem suas horas monitoradas em tempo real, com alertas automáticos quando a revisão se aproxima ou atrasa. Administradores gerenciam toda a frota; operadores registram horas no campo pelo celular sem precisar instalar nada.",
-    technologies: ["React", "Firebase", "TypeScript", "PWA"],
-    results: [
-      "Revisões nunca perdidas por falta de controle",
-      "Histórico completo de manutenção por máquina",
-      "Acesso via PWA sem instalação em loja",
-    ],
+      "Para empresas que operam frotas de máquinas e precisam evitar paradas não planejadas. Operadores no campo registram horas, fotos e observações de voz direto do celular, sem precisar instalar nada. Cada equipamento tem status visual (normal, atenção ou crítico) e, quando a revisão se aproxima ou atrasa, o sistema dispara alertas automáticos por WhatsApp. Gestores acompanham toda a frota por filial em um painel administrativo, com relatórios exportáveis e controle de acesso por perfil (administrador, cliente, operador, mecânico).",
   },
   {
     id: "app-frota",
     title: "App Frota",
-    type: "Gestão",
+    type: "Gestão + App",
     emoji: "🚗",
     color: "from-green-500 via-emerald-500 to-emerald-600",
-    benefit: "✨ Custos sob controle em tempo real",
+    benefit: "✨ Manutenção e abastecimento da frota sob controle, direto do celular",
     description:
-      "Gestão de frotas com telemetria, manutenção preventiva e financeiro integrado.",
+      "App para motoristas registrarem manutenções e abastecimentos, com fluxo de aprovação e painel administrativo para gestão de toda a frota.",
     features: [
-      "Alertas de manutenção",
-      "Controle de abastecimento",
-      "Dashboards financeiros",
+      "Registro de manutenção com fluxo de aprovação (orçamento, peças, mão de obra)",
+      "Controle de abastecimento com custo, km rodado e comprovante fotográfico",
+      "Funciona offline e sincroniza automaticamente ao reconectar",
     ],
     fullDescription:
-      "Plataforma web + mobile para monitorar veículos, condutores e despesas, reduzindo custos operacionais.",
-    technologies: ["Flutter", "Node.js", "TimescaleDB", "AWS IoT"],
-    results: [
-      "-22% custo de combustível",
-      "Disponibilidade de 98%",
-      "Painéis em tempo real",
-    ],
+      "Para empresas com frota de veículos que precisam de controle sem depender de planilhas. Motoristas registram manutenções e abastecimentos pelo celular, mesmo sem internet — os dados sincronizam assim que a conexão volta. Cada manutenção passa por um fluxo de aprovação com orçamento, peças e mão de obra antes de ser executada. Gestores acompanham a frota inteira em um painel com relatórios exportáveis em PDF e controle por filial.",
   },
   {
     id: "cobranca-pro",
@@ -111,45 +85,33 @@ export const projects: Project[] = [
     type: "Financeiro",
     emoji: "💰",
     color: "from-yellow-400 via-orange-400 to-orange-500",
-    benefit: "✨ Recuperação inteligente de receita",
+    benefit: "✨ Cobrança automatizada por WhatsApp, com controle total de recebíveis",
     description:
-      "Sistema de cobrança omnichannel com automações e scoring de crédito.",
+      "Sistema de gestão de cobrança que centraliza títulos, recebimentos e envia lembretes automáticos por WhatsApp para reduzir a inadimplência.",
     features: [
-      "Segmentação inteligente",
-      "Bots multicanal",
-      "Integração bancária",
+      "Importação de títulos via planilha ou integração direta via API com o sistema da empresa",
+      "Envio automático de cobrança por WhatsApp com mensagens personalizadas por cliente",
+      "Registro de recebimentos (PIX, boleto, transferência) e dashboard financeiro com gráficos",
     ],
     fullDescription:
-      "Orquestra campanhas de cobrança com régua automatizada, bots humanizados e indicadores financeiros integrados.",
-    technologies: ["Next.js", "NestJS", "Redis", "OpenAI"],
-    results: [
-      "Recuperação +38%",
-      "Tempo de resposta 2x mais rápido",
-      "Compliance LGPD completo",
-    ],
+      "Para empresas que precisam reduzir a inadimplência sem depender de planilhas soltas. Os títulos (contas a receber) podem ser importados via planilha ou integrados diretamente via API com o sistema que a empresa já usa, com status atualizado automaticamente (em aberto, vencido, recebido, negociado). O sistema dispara cobranças por WhatsApp com mensagens personalizadas — nome do cliente, valor, dias de atraso — e registra cada pagamento recebido, por forma de pagamento. Um dashboard financeiro mostra a visão geral dos recebíveis por período.",
   },
   {
     id: "landing-page-gerenciavel",
     title: "Landing Page Gerenciável",
-    type: "Web + CMS",
+    type: "Site Personalizável",
     emoji: "🌐",
     color: "from-violet-500 via-purple-500 to-pink-500",
     benefit: "✨ Site profissional com painel próprio — sem dev para atualizar",
     description:
-      "Landing page responsiva com painel administrativo completo para gerenciar promoções, campanhas, conteúdo e identidade visual do negócio.",
+      "Landing page adaptável a qualquer segmento de negócio, com painel administrativo para gerenciar conteúdo, imagens e identidade visual sem depender de desenvolvedor.",
     features: [
-      "Gestão de promoções e campanhas pelo próprio cliente",
-      "Editor de marca, hero, rodapé e contato",
-      "Botão WhatsApp flutuante e busca integrada",
+      "Painel administrativo para gerenciar textos, imagens e informações do negócio",
+      "Acesso protegido por autenticação, com controle total sobre o que é publicado",
+      "Estrutura personalizável por seção — cada negócio define o que faz sentido exibir (catálogo, promoções, vagas, serviços)",
     ],
     fullDescription:
-      "Desenvolvida para qualquer segmento de negócio — farmácias, clínicas, lojas, restaurantes — a solução entrega uma landing page profissional com painel administrativo próprio. O dono do negócio atualiza promoções, campanhas, textos e imagens em tempo real, sem depender de desenvolvedor.",
-    technologies: ["Next.js", "Supabase", "TypeScript", "Vercel"],
-    results: [
-      "Conteúdo atualizado em tempo real pelo cliente",
-      "Zero dependência de dev para editar o site",
-      "Adaptável a qualquer segmento de negócio",
-    ],
+      "Desenvolvida para qualquer segmento de negócio — farmácias, comércios, revendas, prestadoras de serviço — a solução entrega um site profissional com painel próprio de administração. Cada negócio define as seções que precisa (promoções, catálogo, vagas, portfólio de serviços) e atualiza tudo sem depender de um desenvolvedor. O painel é protegido por autenticação e os dados ficam armazenados com segurança.",
   },
   {
     id: "inteligencia-estoque",
@@ -167,12 +129,6 @@ export const projects: Project[] = [
     ],
     fullDescription:
       "Para empresas com múltiplas filiais e catálogo extenso de produtos, a plataforma centraliza os dados de estoque, identifica itens críticos e gera sugestões automáticas de recompra com base em sazonalidade e histórico de vendas. Gestores tomam decisões de compra com dados, não com intuição.",
-    technologies: ["Next.js 14", "Supabase", "NextAuth.js", "TypeScript"],
-    results: [
-      "Decisões de compra orientadas por dados",
-      "Identificação automática de estoque crítico",
-      "Visibilidade por filial e por produto",
-    ],
   },
   {
     id: "painel-comercial-campo",
@@ -190,11 +146,5 @@ export const projects: Project[] = [
     ],
     fullDescription:
       "Para empresas com equipes comerciais em campo, o painel centraliza o registro de visitas, os itens vendidos e os checklists de cada consultor. Gestores acompanham a performance individual e coletiva em tempo real e exportam relatórios completos em PDF por período com um clique.",
-    technologies: ["Next.js", "Firebase", "TypeScript", "React PDF"],
-    results: [
-      "Visitas e vendas registradas em tempo real",
-      "Relatórios PDF gerados automaticamente",
-      "Performance individual visível por consultor",
-    ],
   },
 ];

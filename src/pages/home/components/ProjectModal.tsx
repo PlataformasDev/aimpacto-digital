@@ -73,30 +73,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               ))}
             </div>
 
-            <div className="mt-8">
-              <p className="text-sm font-semibold uppercase tracking-wide text-blue-700">
-                Tecnologias
-              </p>
-              <div className="mt-3 flex flex-wrap gap-3">
-                {project.technologies.map((tech) => (
-                  <span key={tech} className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
-              {project.results.map((result) => (
-                <div
-                  key={result}
-                  className="rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 p-4 text-sm font-semibold text-emerald-800"
-                >
-                  {result}
-                </div>
-              ))}
-            </div>
-
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <motion.button
                 whileHover={{ scale: 1.03 }}
