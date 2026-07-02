@@ -102,10 +102,8 @@ export function FormSection() {
                 onChange={handleChange("project")}
               >
                 <option value="">Selecione</option>
-                <option value="access">Portal de Aplicações</option>
                 <option value="nps">NPS Dashboard</option>
                 <option value="rh">RH Conecta</option>
-                <option value="portal">Portal Corporativo</option>
                 <option value="xone">Controle de Revisões</option>
                 <option value="frota">App Frota</option>
                 <option value="cobranca">Cobrança Pro</option>

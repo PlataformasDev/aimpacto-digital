@@ -14,29 +14,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "portal-aplicacoes",
-    title: "Portal de Aplicações",
-    type: "Hub Corporativo",
-    emoji: "🔐",
-    color: "from-emerald-400 via-emerald-500 to-green-500",
-    benefit: "✨ Todos os sistemas da empresa em um único acesso controlado",
-    description:
-      "Portal web que centraliza o acesso às aplicações internas com controle de permissões por usuário e módulo.",
-    features: [
-      "Controle de acesso por perfil",
-      "Gestão de permissões por módulo",
-      "Arquitetura preparada para SSO",
-    ],
-    fullDescription:
-      "Para empresas com múltiplos sistemas internos, o portal elimina logins dispersos e reúne tudo em um ponto único. Cada colaborador vê apenas o que tem permissão. Administração de acesso simples via painel e evolução natural para autenticação única entre sistemas.",
-    technologies: ["Next.js 14", "Supabase", "TypeScript", "Vercel"],
-    results: [
-      "Acesso centralizado a múltiplos sistemas",
-      "Zero login duplo entre módulos",
-      "Permissões gerenciadas em tempo real",
-    ],
-  },
-  {
     id: "nps-dashboard",
     title: "NPS Dashboard",
     type: "Analytics",
@@ -80,29 +57,6 @@ export const projects: Project[] = [
       "-40% no tempo de onboarding",
       "+55% engajamento interno",
       "Base com 12 mil colaboradores",
-    ],
-  },
-  {
-    id: "portal-corporativo",
-    title: "Portal Corporativo",
-    type: "Enterprise",
-    emoji: "🏢",
-    color: "from-slate-600 via-blue-800 to-blue-900",
-    benefit: "✨ Governança e dados integrados",
-    description:
-      "Hub central para operações, BI e integrações entre áreas estratégicas.",
-    features: [
-      "Integração ERP/CRM",
-      "Single Sign-On",
-      "Fluxos de aprovação",
-    ],
-    fullDescription:
-      "Portal corporativo que unifica indicadores, comunicação e automação de processos críticos, garantindo governança e compliance.",
-    technologies: ["Next.js", "GraphQL", "Azure AD", "Kafka"],
-    results: [
-      "+70% visibilidade operacional",
-      "Processos auditáveis end-to-end",
-      "ROI em 8 meses",
     ],
   },
   {
